@@ -38,3 +38,20 @@ you can skip the Downloading macOS part as this repo will that for you
 - No warranty or guarantee is provided—use at your own risk.
 
 - Apple, macOS, and related marks are trademarks of Apple Inc., registered in the U.S. and other countries.
+
+## Demo front-end: École Directe Neo
+
+A modern prototype app is available in `app/` with:
+- Liquid glass inspired design
+- Grade tracking and average
+- AI-like study advice based on grades
+- Auto-generated planning from homework + grades
+
+Run locally:
+
+```bash
+cd app
+python3 -m http.server 4173
+```
+
+Then open `http://localhost:4173`.

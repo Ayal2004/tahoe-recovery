@@ -1,0 +1,164 @@
+:root {
+  color-scheme: dark;
+  --bg: #090b1f;
+  --text: #eef2ff;
+  --glass: rgba(255, 255, 255, 0.1);
+  --border: rgba(255, 255, 255, 0.28);
+  --shadow: 0 18px 50px rgba(0, 0, 0, 0.35);
+  --accent: #77d6ff;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+  background: radial-gradient(circle at top left, #1f3c86, var(--bg) 38%);
+  color: var(--text);
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+.layout {
+  width: min(1120px, 92vw);
+  margin: 2rem auto 3rem;
+  display: grid;
+  gap: 1.2rem;
+}
+
+.glass {
+  background: linear-gradient(145deg, rgba(255, 255, 255, 0.22), rgba(255, 255, 255, 0.08));
+  border: 1px solid var(--border);
+  border-radius: 22px;
+  backdrop-filter: blur(12px) saturate(1.2);
+  -webkit-backdrop-filter: blur(12px) saturate(1.2);
+  box-shadow: var(--shadow);
+}
+
+.hero {
+  padding: 2rem;
+}
+
+.hero h1 {
+  margin: 0.5rem 0;
+  font-size: clamp(1.5rem, 2.8vw, 2.3rem);
+}
+
+.badge {
+  display: inline-block;
+  margin: 0;
+  font-weight: 700;
+  color: #d9f6ff;
+  background: rgba(119, 214, 255, 0.22);
+  border: 1px solid rgba(119, 214, 255, 0.5);
+  border-radius: 999px;
+  padding: 0.3rem 0.7rem;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.grid.two {
+  grid-template-columns: 1fr 1.2fr;
+}
+
+.panel {
+  padding: 1.2rem;
+}
+
+.stack {
+  display: grid;
+  gap: 0.7rem;
+}
+
+label {
+  font-size: 0.9rem;
+  display: grid;
+  gap: 0.35rem;
+}
+
+input,
+button {
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.24);
+  background: rgba(7, 14, 34, 0.55);
+  color: var(--text);
+  padding: 0.65rem 0.8rem;
+  font-size: 0.95rem;
+}
+
+button {
+  cursor: pointer;
+  background: linear-gradient(120deg, rgba(119, 214, 255, 0.34), rgba(182, 119, 255, 0.35));
+  border-color: rgba(255, 255, 255, 0.35);
+  font-weight: 600;
+}
+
+button:hover {
+  filter: brightness(1.09);
+}
+
+.list,
+.planning {
+  margin: 0.9rem 0 0;
+  padding-left: 1.1rem;
+  display: grid;
+  gap: 0.45rem;
+}
+
+.list li,
+.planning li {
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.17);
+  border-radius: 12px;
+  padding: 0.5rem 0.65rem;
+}
+
+.muted {
+  color: #d4dafa;
+}
+
+.advice {
+  white-space: pre-line;
+  line-height: 1.45;
+}
+
+.panel-head {
+  display: flex;
+  justify-content: space-between;
+  gap: 0.8rem;
+  align-items: center;
+}
+
+.bg-orb {
+  position: fixed;
+  width: 380px;
+  height: 380px;
+  border-radius: 50%;
+  filter: blur(52px);
+  z-index: -1;
+}
+
+.orb-1 {
+  left: -130px;
+  top: -80px;
+  background: rgba(76, 133, 255, 0.55);
+}
+
+.orb-2 {
+  right: -140px;
+  bottom: -120px;
+  background: rgba(189, 99, 255, 0.45);
+}
+
+@media (max-width: 900px) {
+  .grid,
+  .grid.two {
+    grid-template-columns: 1fr;
+  }
+}
