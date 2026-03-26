@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>École Directe Neo</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <div class="bg-orb orb-1"></div>
+    <div class="bg-orb orb-2"></div>
+    <main class="layout">
+      <header class="glass hero">
+        <p class="badge">École Directe Neo • Assistant IA</p>
+        <h1>Un tableau de bord scolaire plus beau, plus fluide, plus intelligent</h1>
+        <p>
+          Vision “Liquid Glass” avec conseils IA personnalisés et génération automatique d'un planning
+          selon les devoirs et les notes.
+        </p>
+      </header>
+
+      <section class="grid">
+        <article class="glass panel">
+          <h2>Mes notes</h2>
+          <form id="grade-form" class="stack">
+            <label>
+              Matière
+              <input id="subject" required placeholder="Maths" />
+            </label>
+            <label>
+              Note /20
+              <input id="score" required type="number" min="0" max="20" step="0.5" placeholder="14" />
+            </label>
+            <button type="submit">Ajouter la note</button>
+          </form>
+          <ul id="grade-list" class="list"></ul>
+          <p class="muted">Moyenne générale: <strong id="average">-</strong></p>
+        </article>
+
+        <article class="glass panel">
+          <h2>Mes devoirs</h2>
+          <form id="task-form" class="stack">
+            <label>
+              Devoir
+              <input id="task-name" required placeholder="Exercices fonctions" />
+            </label>
+            <label>
+              Matière
+              <input id="task-subject" required placeholder="Maths" />
+            </label>
+            <label>
+              Échéance
+              <input id="task-deadline" required type="date" />
+            </label>
+            <label>
+              Durée estimée (min)
+              <input id="task-duration" required type="number" min="15" step="15" placeholder="60" />
+            </label>
+            <button type="submit">Ajouter le devoir</button>
+          </form>
+          <ul id="task-list" class="list"></ul>
+        </article>
+      </section>
+
+      <section class="grid two">
+        <article class="glass panel">
+          <h2>Conseils IA sur mes notes</h2>
+          <div id="ai-tips" class="advice">
+            Ajoute des notes pour recevoir des recommandations personnalisées.
+          </div>
+        </article>
+
+        <article class="glass panel">
+          <div class="panel-head">
+            <h2>Planning IA automatique</h2>
+            <button id="generate-plan">Créer mon planning</button>
+          </div>
+          <ol id="planning" class="planning"></ol>
+        </article>
+      </section>
+    </main>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
